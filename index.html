@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <!DOCTYPE html>
+  <html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chama Burguer Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header>
+      <img src="Chama Burguer.jpg" alt="Chama Burguer Logo" class="logo">
+      <h1>Chama Burguer Delivery</h1>
+      <p>Escolha seu lanche favorito e personalize seu pedido!</p>
+    </header>
+
+    <main>
+      <section id="menu">
+        <!-- Produto 1 - CHAMA Clássico -->
+        <div class="product">
+          <h2>CHAMA Clássico</h2>
+          <img src="Chama_Classico.jpg" alt="CHAMA Clássico" class="burger-image">
+          <p>Pão, Hambúrguer de carne bovina, queijo mussarela, cebola roxa, alface, tomate, maionese da casa.</p>
+
+          <p>Remover Ingredientes:</p>
+          <label><input type="checkbox" value="cebola" class="ingredient-classico"> Cebola Roxa</label><br>
+          <label><input type="checkbox" value="alface" class="ingredient-classico"> Alface</label><br>
+          <label><input type="checkbox" value="tomate" class="ingredient-classico"> Tomate</label><br>
+          <label><input type="checkbox" value="maionese" class="ingredient-classico"> Maionese da Casa</label><br>
+
+          <label>Tamanho:
+            <select id="size-classico">
+              <option value="single">Simples - R$25,00</option>
+              <option value="double">Duplo - R$33,00</option>
+            </select>
+          </label>
+          <label>Pão:
+            <select id="bread-classico">
+              <option value="brioche">Brioche</option>
+              <option value="parmesao">Parmesão</option>
+            </select>
+          </label>
+          <button onclick="addToCart('CHAMA Clássico', 'size-classico', 'bread-classico', 'ingredient-classico')">Adicionar ao Carrinho</button>
+        </div>
+
+        <!-- Produto 2 - CHAMA Bacon -->
+        <div class="product">
+          <h2>CHAMA Bacon</h2>
+          <img src="Chama_Bacon.jpg" alt="CHAMA Bacon" class="burger-image">
+          <p>Pão, Hambúrguer de carne bovina, BBQ, queijo mussarela, cheddar cremoso, bacon em tiras, alface, tomate, cebola roxa, maionese da casa.</p>
+
+          <p>Remover Ingredientes:</p>
+          <label><input type="checkbox" value="bacon" class="ingredient-bacon"> Bacon</label><br>
+          <label><input type="checkbox" value="cheddar" class="ingredient-bacon"> Cheddar</label><br>
+          <label><input type="checkbox" value="cebola" class="ingredient-bacon"> Cebola Roxa</label><br>
+          <label><input type="checkbox" value="maionese" class="ingredient-bacon"> Maionese da Casa</label><br>
+
+          <label>Tamanho:
+            <select id="size-bacon">
+              <option value="single">Simples - R$29,00</option>
+              <option value="double">Duplo - R$37,00</option>
+            </select>
+          </label>
+          <label>Pão:
+            <select id="bread-bacon">
+              <option value="brioche">Brioche</option>
+              <option value="parmesao">Parmesão</option>
+            </select>
+          </label>
+          <button onclick="addToCart('CHAMA Bacon', 'size-bacon', 'bread-bacon', 'ingredient-bacon')">Adicionar ao Carrinho</button>
+        </div>
+      </section>
+
+      <section id="cart">
+        <h2>Carrinho de Compras</h2>
+        <!-- O conteúdo do carrinho será atualizado aqui -->
+      </section>
+
+      <!-- Campo para nome do cliente -->
+      <label for="customer-name">Nome do Cliente:</label>
+      <input type="text" id="customer-name" placeholder="Digite seu nome">
+
+      <!-- Botão para finalizar o pedido -->
+      <button onclick="finalizeOrder()">Finalizar Pedido</button>
+
+      <!-- Comanda para a cozinha -->
+      <section id="comanda">
+        <h2>Comanda</h2>
+        <!-- A comanda será gerada aqui -->
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+
+  </html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

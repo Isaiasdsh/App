@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ff4500;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px; /* ajuste o tamanho conforme necessário */
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #e03e00;
+}
+
+#cart {
+  margin-top: 20px;
+}
+
+#cart h2 {
+  margin-bottom: 10px;
+}
+
+#cart p {
+  margin: 5px 0;
+}
+
+#cart button {
+  background-color: red;
+}
+
+.burger-image {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+}
