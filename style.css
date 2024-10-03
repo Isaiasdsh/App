@@ -25,7 +25,7 @@ header {
 .logo {
     display: block;
     margin: 0 auto;
-    width: 150px; /* ajuste o tamanho conforme necessário */
+    width: 150px;
 }
 
 h1 {
@@ -120,4 +120,18 @@ input[type="text"] {
     margin-top: 10px;
     border-radius: 5px;
     border: none;
+}
+
+/* Seção de status do pedido */
+#order-status {
+    margin-top: 20px;
+    background-color: #555555;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--secondary-color);
+}
+
+#status-message {
+    font-size: 1.2em;
+    font-weight: bold;
 }
