@@ -64,6 +64,69 @@ function finalizeOrder() {
     return;
   }
 
+let cart = [];
+
+// Função para garantir que apenas um checkbox de tamanho ou pão possa ser selecionado
+function toggleCheckbox(checkedId, uncheckedId) {
+  const checked = document.getElementById(checkedId);
+  const unchecked = document.getElementById(uncheckedId);
+  
+  if (checked.checked) {
+    unchecked.checked = false;
+  }
+}
+
+function addToCart(productName, sizeClass, breadClass, ingredientClass) {
+  // Capturar o tamanho selecionado
+  const sizeCheckboxes = document.querySelectorAll(`input[name=${sizeClass}]`);
+  let size;
+  sizeCheckboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      size = checkbox.value;
+    }
+  });
+
+  // Capturar o pão selecionado
+  const breadCheckboxes = document.querySelectorAll(`input[name=${breadClass}]`);
+  let bread;
+  breadCheckboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      bread = checkbox.value;
+    }
+  });
+
+  // Capturar ingredientes removidos
+  const ingredientCheckboxes = document.getElementsByClassName(ingredientClass);
+  const removedIngredients = [];
+  for (let checkbox of ingredientCheckboxes) {
+    if (checkbox.checked) {
+      removedIngredients.push(checkbox.value);
+    }
+  }
+  
+  let price = 0;
+  if (size === 'single') {
+    price = (productName === 'CHAMA Clássico') ? 25 : 29;
+  } else {
+    price = (productName === 'CHAMA Clássico') ? 33 : 37;
+  }
+
+  // Adicionar ao carrinho
+  cart.push({
+    productName: productName,
+    size: size === 'single' ? 'Simples' : 'Duplo',
+    bread: bread === 'brioche' ? 'Brioche' : 'Parmesão',
+    price: price,
+    removedIngredients: removedIngredients
+  });
+  
+  displayCart();
+}
+
+function displayCart() {
+  const cartElement
+
+  
   const customerName = document.getElementById("customer-name").value;
   if (!customerName) {
     alert("Por favor, insira seu nome.");
