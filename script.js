@@ -81,6 +81,12 @@ function removeFromCart(index) {
   displayCart();
 }
 
+// Função para simular o andamento do pedido
+function updateOrderStatus(statusMessage) {
+  const statusElement = document.getElementById("status-message");
+  statusElement.textContent = statusMessage;
+}
+
 // Função para finalizar o pedido e formatar a comanda
 function finalizeOrder() {
   if (cart.length === 0) {
@@ -89,8 +95,11 @@ function finalizeOrder() {
   }
 
   const customerName = document.getElementById("customer-name").value;
-  if (!customerName) {
-    alert("Por favor, insira seu nome.");
+  const address = document.getElementById("address").value;
+  const reference = document.getElementById("reference").value;
+
+  if (!customerName || !address || !reference) {
+    alert("Por favor, preencha todos os campos de endereço, ponto de referência e nome.");
     return;
   }
 
@@ -98,7 +107,8 @@ function finalizeOrder() {
   const comandaElement = document.getElementById("comanda");
   comandaElement.innerHTML = ""; // Limpa a comanda antes de atualizar
 
-  let orderText = `🍔 *Comanda de Pedido - Chama Burguer* 🍔\n\nCliente: ${customerName}\n\n`;
+  let orderText = `🍔 *Comanda de Pedido - Chama Burguer* 🍔\n\nCliente: ${customerName}\n`;
+  orderText += `Endereço: ${address}\nPonto de Referência: ${reference}\n\n`;
   let total = 0;
 
   cart.forEach((item, index) => {
@@ -121,6 +131,15 @@ function finalizeOrder() {
 
   // Exibir a comanda formatada na página
   comandaElement.innerHTML = `<pre>${orderText}</pre>`;
+
+  // Atualizar o status do pedido
+  updateOrderStatus("Pedido Recebido");
+
+  // Simular mudanças de status do pedido
+  setTimeout(() => updateOrderStatus("Em Preparo"), 5000);
+  setTimeout(() => updateOrderStatus("Saiu para Entrega"), 10000);
+  setTimeout(() => updateOrderStatus("Entregue"), 15000);
+}
 
   // Enviar pedido via WhatsApp
   const whatsappNumber = "48991490613"; // Coloque aqui o número do WhatsApp do restaurante
