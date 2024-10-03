@@ -99,7 +99,7 @@ function finalizeOrder() {
   comandaElement.innerHTML = `<pre>${orderText}</pre>`;
 
   // Enviar pedido via WhatsApp
-  const whatsappNumber = "SEU_NUMERO_DE_WHATSAPP"; // Coloque aqui o número do WhatsApp do restaurante
+  const whatsappNumber = 48991490613; // Coloque aqui o número do WhatsApp do restaurante
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderText)}`;
   window.open(whatsappLink, '_blank');
 }
