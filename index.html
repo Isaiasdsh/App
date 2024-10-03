@@ -29,13 +29,13 @@
 
                 <!-- Escolha de Tamanho do Lanche (Simples ou Duplo) -->
                 <p>Escolha o Tamanho:</p>
-                <label><input type="checkbox" name="size-classico" value="single" checked> Simples - R$25,00</label><br>
-                <label><input type="checkbox" name="size-classico" value="double"> Duplo - R$33,00</label><br>
+                <label><input type="checkbox" name="size-classico" id="size-single-classico" value="single" onclick="toggleCheckbox('size-single-classico', 'size-double-classico')"> Simples - R$25,00</label><br>
+                <label><input type="checkbox" name="size-classico" id="size-double-classico" value="double" onclick="toggleCheckbox('size-double-classico', 'size-single-classico')"> Duplo - R$33,00</label><br>
 
                 <!-- Escolha de Pão (Brioche ou Parmesão) -->
                 <p>Escolha o Pão:</p>
-                <label><input type="checkbox" name="bread-classico" value="brioche" checked> Brioche</label><br>
-                <label><input type="checkbox" name="bread-classico" value="parmesao"> Parmesão</label><br>
+                <label><input type="checkbox" name="bread-classico" id="bread-brioche-classico" value="brioche" onclick="toggleCheckbox('bread-brioche-classico', 'bread-parmesao-classico')"> Brioche</label><br>
+                <label><input type="checkbox" name="bread-classico" id="bread-parmesao-classico" value="parmesao" onclick="toggleCheckbox('bread-parmesao-classico', 'bread-brioche-classico')"> Parmesão</label><br>
 
                 <button onclick="addToCart('CHAMA Clássico', 'size-classico', 'bread-classico', 'ingredient-classico')">Adicionar ao Carrinho</button>
             </div>
@@ -54,13 +54,13 @@
 
                 <!-- Escolha de Tamanho do Lanche (Simples ou Duplo) -->
                 <p>Escolha o Tamanho:</p>
-                <label><input type="checkbox" name="size-bacon" value="single" checked> Simples - R$29,00</label><br>
-                <label><input type="checkbox" name="size-bacon" value="double"> Duplo - R$37,00</label><br>
+                <label><input type="checkbox" name="size-bacon" id="size-single-bacon" value="single" onclick="toggleCheckbox('size-single-bacon', 'size-double-bacon')"> Simples - R$29,00</label><br>
+                <label><input type="checkbox" name="size-bacon" id="size-double-bacon" value="double" onclick="toggleCheckbox('size-double-bacon', 'size-single-bacon')"> Duplo - R$37,00</label><br>
 
                 <!-- Escolha de Pão (Brioche ou Parmesão) -->
                 <p>Escolha o Pão:</p>
-                <label><input type="checkbox" name="bread-bacon" value="brioche" checked> Brioche</label><br>
-                <label><input type="checkbox" name="bread-bacon" value="parmesao"> Parmesão</label><br>
+                <label><input type="checkbox" name="bread-bacon" id="bread-brioche-bacon" value="brioche" onclick="toggleCheckbox('bread-brioche-bacon', 'bread-parmesao-bacon')"> Brioche</label><br>
+                <label><input type="checkbox" name="bread-bacon" id="bread-parmesao-bacon" value="parmesao" onclick="toggleCheckbox('bread-parmesao-bacon', 'bread-brioche-bacon')"> Parmesão</label><br>
 
                 <button onclick="addToCart('CHAMA Bacon', 'size-bacon', 'bread-bacon', 'ingredient-bacon')">Adicionar ao Carrinho</button>
             </div>
@@ -85,5 +85,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-}
