@@ -67,10 +67,25 @@
             <!-- O conteúdo do carrinho será atualizado aqui -->
         </section>
 
+        <!-- Campo para endereço completo -->
+        <label for="address">Endereço Completo:</label>
+        <input type="text" id="address" placeholder="Rua, Número, Bairro">
+
+        <!-- Campo para ponto de referência -->
+        <label for="reference">Ponto de Referência:</label>
+        <input type="text" id="reference" placeholder="Ex: Perto do Supermercado X">
+
         <label for="customer-name">Nome do Cliente:</label>
         <input type="text" id="customer-name" placeholder="Digite seu nome">
 
+        <!-- Botão para finalizar o pedido -->
         <button class="finalize-btn" onclick="finalizeOrder()">Finalizar Pedido</button>
+
+        <!-- Seção para exibir o andamento do pedido -->
+        <section id="order-status">
+            <h2>Status do Pedido</h2>
+            <p id="status-message">Seu pedido será atualizado aqui.</p>
+        </section>
 
         <section id="comanda">
             <h2>Comanda</h2>
@@ -81,3 +96,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
